@@ -2,7 +2,7 @@
 <!-- <h1>Cocktails#index</h1>
 <p>Find me in app/views/cocktails/index.html.erb</p> -->
 
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/berlin');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path('background.jpg') %>);">
   <div class="banner-content">
     <h1>Bartendr</h1>
   </div>
@@ -17,3 +17,5 @@
   <% end %>
 </ul>
 <%= "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 100 %>
+
+<!-- https://kitt.lewagon.com/placeholder/cities/berlin -->
