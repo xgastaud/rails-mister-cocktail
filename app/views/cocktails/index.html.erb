@@ -1,8 +1,14 @@
-<h1>My cocktail list</h1>
+<%= render 'shared/navbar' %>
 <!-- <h1>Cocktails#index</h1>
 <p>Find me in app/views/cocktails/index.html.erb</p> -->
-<%= link_to "Index", cocktails_path %>
-<%= link_to "Add cocktail", new_cocktail_path %>
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/berlin');">
+  <div class="banner-content">
+    <h1>Bartendr</h1>
+  </div>
+</div>
+
+<h1>My cocktail list</h1>
 <ul>
   <% @cocktails.each do |cocktail| %>
   <li>
@@ -10,4 +16,4 @@
   </li>
   <% end %>
 </ul>
-
+<%= "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 100 %>

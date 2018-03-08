@@ -1,14 +1,24 @@
-<h1>New cocktail recipe</h1>
-<!-- <h1>Cocktails#new</h1>
-<p>Find me in app/views/cocktails/new.html.erb</p> -->
-<%= link_to "Index", cocktails_path %>
-<%= form_for @cocktail do |f| %>
+<%= render 'shared/navbar' %>
+<div class="container">
+  <h1>New cocktail recipe</h1>
+  <!-- <h1>Cocktails#new</h1>
+  <p>Find me in app/views/cocktails/new.html.erb</p> -->
 
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
-  </div>
+  <%= simple_form_for @cocktail do |f| %>
 
-  <%= f.submit class: 'btn btn-primary' %>
+    <%= f.input :name %>
+    <%= f.submit "Create" %>
 
-<% end %>
+  <% end %>
+
+  <%#= form_for @cocktail do |f| %>
+
+    <!-- <div class="form-group"> -->
+      <%#= f.label :name %>
+      <%#= f.text_field :name, class: 'form-control' %>
+    <!-- </div> -->
+
+    <%#= f.submit class: 'btn btn-primary' %>
+
+  <%# end %>
+</div>

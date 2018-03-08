@@ -1,13 +1,14 @@
+<%= render 'shared/navbar' %>
 <!-- <h1>Doses#new</h1>
 <p>Find me in app/views/doses/new.html.erb</p> -->
-<h1>Add ingredient to <%= @cocktail.name %></h1>
+<div class="container">
+  <h1>Add ingredient to <%= @cocktail.name %></h1>
 
-<%= link_to "Index", cocktails_path %>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.association :ingredient %>
+    <%= f.input :description %>
+    <%= f.submit "Create" %>
 
-  <%= f.association :ingredient %>
-  <%= f.input :description %>
-  <%= f.submit "Create" %>
-
-<% end %>
+  <% end %>
+</div>
