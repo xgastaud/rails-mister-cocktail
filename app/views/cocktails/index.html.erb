@@ -7,15 +7,30 @@
     <h1>Bartendr</h1>
   </div>
 </div>
+<div class="spacer">
+  <h1>My cocktail list</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+        <!-- insert <div class="card"> -->
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path('background.jpg') %>');">
+            <div class="card-category">Cocktail</div>
+            <div class="card-description">
+              <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+              <p>See ingredients</p>
+            </div>
+            <%= link_to cocktail.name, cocktail_path(cocktail), class: "card-link" %>
+          </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<h1>My cocktail list</h1>
-<ul>
-  <% @cocktails.each do |cocktail| %>
-  <li>
-    <%= link_to cocktail.name, cocktail_path(cocktail) %>
-  </li>
-  <% end %>
-</ul>
+
+
+
 <%= "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 100 %>
 
 <!-- https://kitt.lewagon.com/placeholder/cities/berlin -->

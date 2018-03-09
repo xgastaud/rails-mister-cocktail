@@ -13,6 +13,11 @@
 
 .navbar-wagon-white {
   background: white;
+  .navbar-wagon-link {
+    color: rgb(3,4,5);
+    // #616668;
+    font-size: 14px;
+  }
 }
 
 /* Logo */
@@ -42,7 +47,7 @@
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: rga(3,4,5);
+  color: #469AE0;
   // #616668;
   font-size: 14px;
 }
