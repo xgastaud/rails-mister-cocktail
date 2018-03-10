@@ -13,6 +13,9 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktails_params)
+    if @cocktail[:photo].nil?
+      @cocktail[:photo] = "https://res.cloudinary.com/dpthh89hv/image/upload/v1520686931/card_background.jpg"
+    end
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
